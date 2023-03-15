@@ -9,9 +9,15 @@ namespace RoboApp
             int x = 0, y = 0;
             char direcao;
             string coordenadas;
+            int tamanhoAreaX, tamanhoAreaY;
 
             Console.WriteLine("Digite a posição inicial do robô.");
             Console.WriteLine("A posição inicial do robô são 2 dígitos e uma letra indicando a direção que pode ser N, S, L, O.");
+
+            Console.WriteLine("Qual o tamanho da area a ser explorada: ");
+            tamanhoAreaX = Convert.ToInt32(Console.ReadLine());
+            tamanhoAreaY = Convert.ToInt32(Console.ReadLine()); 
+            
 
             Console.Write("Posição 1 inicial do robô: ");
             x = Convert.ToInt32(Console.ReadLine());
@@ -179,8 +185,22 @@ namespace RoboApp
 
             }
 
-            Console.WriteLine("A posição final do robô 1 é: " + x + "  " + y + " " + direcao);
-            Console.WriteLine("A posição final do robô 2 é: " + x2 + "  " + y2 + " " + direcao2);
+            if (x > tamanhoAreaX || y > tamanhoAreaY)
+            {
+                Console.WriteLine("O robô 1 saiu da nossa área de controle.");
+            } else
+            {
+                Console.WriteLine("A posição final do robô 1 é: " + x + "  " + y + " " + direcao);
+            }
+
+            if (x2 > 5 || y2 > 5)
+            {
+                Console.WriteLine("O robô 2 saiu da nossa área de controle.");
+
+            } else
+            {
+                Console.WriteLine("A posição final do robô 2 é: " + x2 + "  " + y2 + " " + direcao2);
+            }
             Console.ReadLine();
         }
     }
