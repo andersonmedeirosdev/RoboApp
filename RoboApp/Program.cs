@@ -7,11 +7,11 @@ namespace RoboApp
         static void Main(string[] args)
         {
             int x = 0, y = 0;
-            char direcao = 'N';
+            char direcao;
             string coordenadas;
 
             Console.WriteLine("Digite a posição inicial do robô.");
-            Console.WriteLine("A posição inicial do robô são 2 dígitos e uma letra indicando a direção N, S, L, O.");
+            Console.WriteLine("A posição inicial do robô são 2 dígitos e uma letra indicando a direção que pode ser N, S, L, O.");
 
             Console.Write("Posição 1 inicial do robô: ");
             x = Convert.ToInt32(Console.ReadLine());
@@ -95,7 +95,7 @@ namespace RoboApp
             //Robô 2.
 
             int x2 = 0, y2 = 0;
-            char direcao2 = 'N';
+            char direcao2;
             string coordenadas2;
 
             Console.WriteLine("Digite a posição inicial do robô 2.");
@@ -104,7 +104,7 @@ namespace RoboApp
             x2 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
 
-            Console.Write("Posição 2 inicial do robô: ");
+            Console.Write("Posição 2 inicial do robô 2: ");
             y2 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine();
 
@@ -179,8 +179,8 @@ namespace RoboApp
 
             }
 
-            Console.WriteLine("A posição final do robô é 1 " + x + "  " + y + " " + direcao);
-            Console.WriteLine("A posição final do robô é 2 " + x2 + "  " + y2 + " " + direcao2);
+            Console.WriteLine("A posição final do robô 1 é: " + x + "  " + y + " " + direcao);
+            Console.WriteLine("A posição final do robô 2 é: " + x2 + "  " + y2 + " " + direcao2);
             Console.ReadLine();
         }
     }
